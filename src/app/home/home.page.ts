@@ -41,7 +41,7 @@ export class HomePage {
             this.loading = false;
             this.navCtrl.navigateForward('/end-slider')
           }
-        }, 1000);
+        }, 3000);
       });
     this.loading = false;
   }
