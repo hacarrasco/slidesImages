@@ -1,23 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title slot="start">
-      Rick and Morty Viewer
-    </ion-title>
+    <ion-title class="ion-text-center"> Rick and Morty Viewer </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <div class="center-container">
-    <img *ngIf="currentImageUrl" [src]="currentImageUrl" alt="Rick and Morty Character" class="center-image">
-    <ion-button (click)="loadAndShowImages()">Mostrar Imágenes</ion-button>
-
-  </div>
+<ion-content >
   
-
-  <ion-spinner *ngIf="loading"></ion-spinner>
-
- 
+  <div class="center-container" id="ion-content-center">
+    <ion-spinner id="custom-spinner" *ngIf="showSpinner"></ion-spinner>
+    <img
+      *ngIf="currentImageUrl"
+      [src]="currentImageUrl"
+      alt=""
+      class="center-image"
+    />
+    <ion-button *ngIf="showButton" (click)="loadAndShowImages()"
+      >Mostrar Imágenes</ion-button
+    >
+  </div>
 </ion-content>
-
-
-
