@@ -25,3 +25,22 @@
 #container a {
   text-decoration: none;
 }
+
+ion-card{
+  width:80%;
+  margin: auto;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+.center-image {
+  max-width: 100%; /* Ajusta el tamaño de la imagen según el contenedor */
+  max-height: 100%; /* Ajusta el tamaño de la imagen según el contenedor */
+}
+
+

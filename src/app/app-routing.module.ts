@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'end-slider',
+    loadChildren: () => import('./end-slider/end-slider.module').then( m => m.EndSliderPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,20 +1,23 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title slot="start">
+      Rick and Morty Viewer
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="center-container">
+    <img *ngIf="currentImageUrl" [src]="currentImageUrl" alt="Rick and Morty Character" class="center-image">
+    <ion-button (click)="loadAndShowImages()">Mostrar Imágenes</ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
+  
+
+  <ion-spinner *ngIf="loading"></ion-spinner>
+
+ 
 </ion-content>
+
+
+
